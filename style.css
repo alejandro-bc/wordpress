@@ -1,0 +1,111 @@
+/* Fondo dinámico con animación inicial */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1e1e, #2b2b2b, #ffa500, #cc8400);
+    background-size: 200% 200%;
+    animation: backgroundAnimation 5s ease-in-out forwards; /* Animación inicial */
+    color: #ffffff;
+}
+
+/* Animación inicial */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: rgba(43, 43, 43, 0.95); /* Transparencia */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffa500;
+}
+
+/* Etiquetas */
+label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+    width: 100%;
+    text-align: left;
+}
+
+/* Campos de entrada */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ffa500;
+    border-radius: 10px;
+    background-color: #3b3b3b;
+    color: #ffffff;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Placeholder en los campos */
+input::placeholder,
+textarea::placeholder {
+    color: #b3b3b3;
+}
+
+/* Botón principal */
+button {
+    background-color: #ffa500;
+    color: #1e1e1e;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botón en hover */
+button:hover {
+    background-color: #cc8400;
+    transform: scale(1.05);
+}
+
+/* Enfoque en campos */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ffa500;
+    box-shadow: 0 0 5px #ffa500;
+}
+
+/* Mensajes y detalles */
+p {
+    text-align: center;
+    font-size: 0.9em;
+    color: #b3b3b3;
+}
