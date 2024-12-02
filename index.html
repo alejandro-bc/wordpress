@@ -3,19 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicar en WordPress</title>
+    <title>Gestión de WordPress</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <form onsubmit="event.preventDefault(); publicarEnWordpress();">
-        <h1>Publicar</h1>
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" placeholder="Introduce el título" required>
-        <label for="contenido">Contenido:</label>
-        <textarea id="contenido" name="contenido" rows="5" placeholder="Introduce el contenido" required></textarea>
-        <button type="submit">Publicar</button>
-        <p>Publica directamente en WordPress desde aquí.</p>
-    </form>
+    <div class="contenedor">
+        <h1>Gestión de WordPress</h1>
+
+        <div class="fila">
+            <!-- Post Personalizado -->
+            <div class="seccion post-personalizado">
+                <h2>Post Personalizado</h2>
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" placeholder="Introduce el título">
+                <label for="contenido">Contenido:</label>
+                <textarea id="contenido" rows="4" placeholder="Introduce el contenido"></textarea>
+                <button onclick="publicarEnWordpress()">Crear Post</button>
+            </div>
+
+            <!-- Modificar Teléfono -->
+            <div class="seccion modificar-telefono">
+                <h2>Modificar Teléfono</h2>
+                <label for="telefono">Nuevo Teléfono:</label>
+                <input type="text" id="telefono" placeholder="Introduce el nuevo teléfono">
+                <!-- Cambié el nombre de la función llamada aquí -->
+                <button onclick="actualizarTelefonoEnWordpress(137, document.getElementById('telefono').value)">Enviar</button>
+            </div>
+
+            <!-- Post del Tiempo -->
+            <div class="seccion post-tiempo">
+                <h2>Post del Tiempo</h2>
+                <button onclick="consultarYPublicar()">Generar Post</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
